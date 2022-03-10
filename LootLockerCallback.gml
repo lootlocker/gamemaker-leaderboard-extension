@@ -233,7 +233,7 @@ if(asyncStatus == 0)
     }
     else if(asyncID == resetMapID)
     {
-        LootLockerInitialize(string(global.gameAPIkey), string(global.gameVersion), string(global.developmentMode));
+        LootLockerInitialize(string(global.gameAPIkey), string(global.gameVersion), string(global.developmentMode), "");
         ini_open("LootLockerConfiguration.ini");
         ini_write_string("resetMapID","id","-1");
         ini_close();
@@ -244,58 +244,3 @@ else if(asyncStatus < 0)
 {
     show_debug_message("LootLocker failed async, error: "+string(asyncStatus));
 }
-
-
-/*
-
-
-if(ds_map_find_value(async_load, "status") == 0)
-{
-	var text = ds_map_find_value(async_load, "result");
-	show_debug_message(text);
-	show_debug_message("Async_load: "+string(async_load));
-	show_debug_message("currentMap: "+string(currentMap));
-	//LootLockerCallback()
-	var data = json_parse(text);
-	if variable_struct_exists(data, "name")
-	{
-		global.playerName = data.name;
-	}
-	if variable_struct_exists(data, "session_token")
-	{
-		global.session_token = data.session_token;
-	}
-	if(loggingIn == true)
-	{
-		loggingIn = false;
-		ini_open("LootLockerConfiguration.ini");
-		playerIdentifier = data.player_identifier;
-		ini_write_string("playerIdentifier","id", playerIdentifier);
-		ini_close();
-		event_user(0);
-		event_user(2);
-	}
-	if(ds_map_find_value(async_load, "id") == currentMap)
-	{
-		for(var i = 0; i < array_length(data.items); i++)
-		{
-			show_debug_message(data.items[i]);
-			global.lootLockerData += string(data.items[i].rank)+". ";
-			if(data.items[i].player.name == "")
-			{
-				global.lootLockerData += string(data.items[i].player.id);
-			}
-			else
-			{
-				global.lootLockerData += string(data.items[i].player.name);
-			}
-			global.lootLockerData += "        ";
-			global.lootLockerData += string(data.items[i].score);
-			global.lootLockerData += "\n";
-		}	
-		global.gettingScore = false;
-	}
-}
-
-
-*/
