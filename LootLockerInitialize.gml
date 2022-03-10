@@ -12,6 +12,7 @@ ini_write_string("getHighscoresTopMapID","id","-1");
 ini_write_string("getHighscoresCenteredMapID1","id","-1");
 ini_write_string("getHighscoresCenteredMapID2","id","-1");
 ini_write_string("autoRefreshLeaderboardAmount","count","10");
+ini_write_string("leaderboardID","id",string(argument3));
 // Save arguments in memory, needed for reset
 global.gameAPIkey = string(argument0);
 global.gameVersion = string(argument1);
