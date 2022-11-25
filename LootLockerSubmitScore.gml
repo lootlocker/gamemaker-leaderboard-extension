@@ -10,7 +10,10 @@ ds_map_add(map, "Content-Type","application/json");
 ds_map_add(map,"x-session-token", sessionToken);
 var data = "{\"score\": "+string(argument1)+"}";
 submitScoreMapID = http_request(url, "POST", map, data);
-show_debug_message(string(data));
+if(global.LLdevelopmentMode == true)
+{
+    show_debug_message("Sending score:"+string(data));
+}
 ini_open("LootLockerConfiguration.ini");
 ini_write_string("submitScoreMapID","id",string(submitScoreMapID));
 ini_write_string("leaderboardID","id",argument0);

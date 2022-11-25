@@ -1,5 +1,26 @@
 #define LootLockerInitialize
+global.LootLockerInitialized = false;
 // Initialization
+
+// If we are NOT running in the browser, delete the config-file
+// This is to make sure that a new config file is used when playing desktop version
+// otherwise an empty config file will be used for HTML5
+//show_debug_message()
+if(os_browser == browser_not_a_browser)
+{
+    ini_open(program_directory+"\LootLockerConfiguration.ini");
+    exists = ini_read_string("exists", "value", "false");
+    ini_close();
+
+    if(exists == "false")
+    {
+        // Create a new one in standard folder instead
+        ini_open("LootLockerConfiguration.ini");
+        ini_write_string("exists", "value", "true")
+        ini_close();
+    }
+}
+
 // Store information
 ini_open("LootLockerConfiguration.ini");
 playerIdentifier = ini_read_string("playerIdentifier","id","");
@@ -16,7 +37,18 @@ ini_write_string("leaderboardID","id",string(argument3));
 // Save arguments in memory, needed for reset
 global.gameAPIkey = string(argument0);
 global.gameVersion = string(argument1);
-global.developmentMode = string(argument2);
+
+// Convert argument to "bool-string"
+var devModeBoolString = "false";
+if(argument2 == false)
+{
+    devModeBoolString = "false"
+}
+else if(argument2 == true)
+{
+    devModeBoolString = "true";
+}
+global.LLdevelopmentMode = string(devModeBoolString);
 
 // Cached player info
 global.LootLockerPlayerID = ini_read_string("playerID","id","");
@@ -27,41 +59,35 @@ global.LootLockerPlayerMetadata = ini_read_string("LootLockerPlayerMetadata","id
 ini_close();
 
 // Top highscores lists
-global.LootLockerHighscoresTopRankList = array_create(100, "");
-global.LootLockerHighscoresTopNamesList = array_create(100, "");
-global.LootLockerHighscoresTopMetadataList = array_create(100, "");
-global.LootLockerHighscoresTopScoreList = array_create(100, "");
-global.LootLockerHighscoresTopIDList = array_create(100, "");
+global.LootLockerHighscoresTopRankList = array_create(100, " ");
+global.LootLockerHighscoresTopNamesList = array_create(100, " ");
+global.LootLockerHighscoresTopMetadataList = array_create(100, " ");
+global.LootLockerHighscoresTopScoreList = array_create(100, " ");
+global.LootLockerHighscoresTopIDList = array_create(100, " ");
 
-// Top highscore strings
-global.LootLockerHighscoresTopRankString = "";
-global.LootLockerHighscoresTopNamesString = "";
-global.LootLockerHighscoresTopMetadataString = "";
-global.LootLockerHighscoresTopScoreString = "";
-global.LootLockerHighscoresTopIDString = "";
+//Formatted top
+global.LootLockerHighscoresTopFormatted = "";
 
 // Centered highscores lists
-global.LootLockerHighscoresCenteredRankList = array_create(100, "");
-global.LootLockerHighscoresCenteredNamesList = array_create(100, "");
-global.LootLockerHighscoresCenteredMetadataList = array_create(100, "");
-global.LootLockerHighscoresCenteredScoreList = array_create(100, "");
-global.LootLockerHighscoresCenteredIDList = array_create(100, "");
-// Centered highscores strings
-global.LootLockerHighscoresCenteredRankString = "";
-global.LootLockerHighscoresCenteredNamesString = "";
-global.LootLockerHighscoresCenteredMetadataString = "";
-global.LootLockerHighscoresCenteredScoreString = "";
-global.LootLockerHighscoresCenteredIDString = "";
+global.LootLockerHighscoresCenteredRankList = array_create(100, " ");
+global.LootLockerHighscoresCenteredNamesList = array_create(100, " ");
+global.LootLockerHighscoresCenteredMetadataList = array_create(100, " ");
+global.LootLockerHighscoresCenteredScoreList = array_create(100, " ");
+global.LootLockerHighscoresCenteredIDList = array_create(100, " ");
 
-// Global state for LootLocker, this needs to be set before starting
-global.LootLockerInitialized = false;
+//Formatted center
+global.LootLockerHighscoresCenteredFormatted = "";
 
 // Send Start Guest session request
 var url = "https://api.lootlocker.io/game/v2/session/guest";
 var map = ds_map_create();
 ds_map_add(map, "Content-Type","application/json");
-var data = "{\"game_key\": \""+argument0+"\",\"player_identifier\":\""+playerIdentifier+"\", \"game_version\": \""+argument1+"\",\"development_mode\": \""+argument2+"\"}";
-show_debug_message("Sending LootLocker request: "+data);
+
+var data = "{\"game_key\": \""+argument0+"\",\"player_identifier\":\""+playerIdentifier+"\", \"game_version\": \""+argument1+"\",\"development_mode\": \""+devModeBoolString+"\"}";
+if(global.LLdevelopmentMode == true)
+{
+    show_debug_message("Sending LootLocker request: "+data);
+}
 loginMapID = http_request(url, "POST", map, data);
 
 // Write loginmapID

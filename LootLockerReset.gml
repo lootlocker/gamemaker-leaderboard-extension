@@ -10,7 +10,6 @@ ini_write_string("getHighscoresTopMapID","id","-1");
 ini_write_string("getHighscoresCenteredMapID1","id","-1");
 ini_write_string("getHighscoresCenteredMapID2","id","-1");
 ini_write_string("autoRefreshLeaderboardAmount","count","10");
-
 // Cached player info
 ini_write_string("playerID","id","");
 ini_write_string("playerName","name","");
@@ -20,10 +19,6 @@ ini_write_string("LootLockerPlayerMetadata","id","");
 ini_close();
 
 // End current session
-/*
-curl -X DELETE "https://api.lootlocker.io/game/v1/session" \
-  -H "x-session-token: your_token_here"
-*/
 var url = "https://api.lootlocker.io/game/v1/session";
 var map = ds_map_create();
 ds_map_add(map, "Content-Type","application/json");
