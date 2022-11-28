@@ -16,6 +16,7 @@ global.LootLockerPlayerID = ini_read_string("playerID","id"," ");
 global.LootLockerPlayerName = ini_read_string("playerName","name"," ");
 global.LootLockerPlayerRank = ini_read_string("LootLockerPlayerRank","rank"," ");
 global.LootLockerPlayerScore = ini_read_string("LootLockerPlayerScore","score"," ");
+global.LootLockerPlayerMetadata = ini_read_string("LootLockerPlayerMetadata","metadata"," ");
 playerNameMapID = ini_read_string("playerNameMapID","id","0");
 submitScoreMapID = ini_read_string("submitScoreMapID","id","0");
 ini_close();
@@ -137,6 +138,7 @@ if(asyncStatus == 0)
 			ini_write_string("submitScoreMapID","id","0");
 			ini_write_string("LootLockerPlayerRank","rank", global.LootLockerPlayerRank);
 			ini_write_string("LootLockerPlayerScore","score", global.LootLockerPlayerScore);
+			ini_write_string("LootLockerPlayerMetadata","metadata", global.LootLockerPlayerMetadata);
 			ini_close();
 			global.LootLockerPlayerRank = string(data.rank);
 			global.LootLockerPlayerScore = string(data.score);
