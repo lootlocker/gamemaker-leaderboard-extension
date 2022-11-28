@@ -14,6 +14,8 @@ autoRefreshLeaderboards = ini_read_string("autoRefreshLeaderboard","bool","true"
 autoRefreshLeaderboardsAmount = ini_read_string("autoRefreshLeaderboardAmount","count","10");
 global.LootLockerPlayerID = ini_read_string("playerID","id"," ");
 global.LootLockerPlayerName = ini_read_string("playerName","name"," ");
+global.LootLockerPlayerRank = ini_read_string("LootLockerPlayerRank","rank"," ");
+global.LootLockerPlayerScore = ini_read_string("LootLockerPlayerScore","score"," ");
 playerNameMapID = ini_read_string("playerNameMapID","id","0");
 submitScoreMapID = ini_read_string("submitScoreMapID","id","0");
 ini_close();
@@ -133,9 +135,15 @@ if(asyncStatus == 0)
 		{
 			ini_open("LootLockerConfiguration.ini");
 			ini_write_string("submitScoreMapID","id","0");
+			ini_write_string("LootLockerPlayerRank","rank", global.LootLockerPlayerRank);
+			ini_write_string("LootLockerPlayerScore","score", global.LootLockerPlayerScore);
+			ini_close();
 			global.LootLockerPlayerRank = string(data.rank);
 			global.LootLockerPlayerScore = string(data.score);
-			ini_close();
+			if(global.LLdevelopmentMode == true)
+			{
+				show_debug_message("LootLocker submitted score to leaderboard");
+			}
 			if(autoRefreshLeaderboards == "true" && leaderboardID != "")
 			{
 				LootLockerGetHighscoresTop(string(leaderboardID), "10");
