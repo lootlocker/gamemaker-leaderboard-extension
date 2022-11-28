@@ -134,14 +134,15 @@ if(asyncStatus == 0)
 		}
 		else if(asyncID == submitScoreMapID)
 		{
+			global.LootLockerPlayerRank = string(data.rank);
+			global.LootLockerPlayerScore = string(data.score);
 			ini_open("LootLockerConfiguration.ini");
 			ini_write_string("submitScoreMapID","id","0");
 			ini_write_string("LootLockerPlayerRank","rank", global.LootLockerPlayerRank);
 			ini_write_string("LootLockerPlayerScore","score", global.LootLockerPlayerScore);
 			ini_write_string("LootLockerPlayerMetadata","metadata", global.LootLockerPlayerMetadata);
 			ini_close();
-			global.LootLockerPlayerRank = string(data.rank);
-			global.LootLockerPlayerScore = string(data.score);
+
 			if(global.LLdevelopmentMode == true)
 			{
 				show_debug_message("LootLocker submitted score to leaderboard");
