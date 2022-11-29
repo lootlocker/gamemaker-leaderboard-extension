@@ -14,6 +14,9 @@ autoRefreshLeaderboards = ini_read_string("autoRefreshLeaderboard","bool","true"
 autoRefreshLeaderboardsAmount = ini_read_string("autoRefreshLeaderboardAmount","count","10");
 global.LootLockerPlayerID = ini_read_string("playerID","id"," ");
 global.LootLockerPlayerName = ini_read_string("playerName","name"," ");
+global.LootLockerPlayerRank = ini_read_string("LootLockerPlayerRank","rank"," ");
+global.LootLockerPlayerScore = ini_read_string("LootLockerPlayerScore","score"," ");
+global.LootLockerPlayerMetadata = ini_read_string("LootLockerPlayerMetadata","metadata"," ");
 playerNameMapID = ini_read_string("playerNameMapID","id","0");
 submitScoreMapID = ini_read_string("submitScoreMapID","id","0");
 ini_close();
@@ -131,11 +134,19 @@ if(asyncStatus == 0)
 		}
 		else if(asyncID == submitScoreMapID)
 		{
-			ini_open("LootLockerConfiguration.ini");
-			ini_write_string("submitScoreMapID","id","0");
 			global.LootLockerPlayerRank = string(data.rank);
 			global.LootLockerPlayerScore = string(data.score);
+			ini_open("LootLockerConfiguration.ini");
+			ini_write_string("submitScoreMapID","id","0");
+			ini_write_string("LootLockerPlayerRank","rank", global.LootLockerPlayerRank);
+			ini_write_string("LootLockerPlayerScore","score", global.LootLockerPlayerScore);
+			ini_write_string("LootLockerPlayerMetadata","metadata", global.LootLockerPlayerMetadata);
 			ini_close();
+
+			if(global.LLdevelopmentMode == true)
+			{
+				show_debug_message("LootLocker submitted score to leaderboard");
+			}
 			if(autoRefreshLeaderboards == "true" && leaderboardID != "")
 			{
 				LootLockerGetHighscoresTop(string(leaderboardID), "10");

@@ -53,9 +53,9 @@ global.LLdevelopmentMode = string(devModeBoolString);
 // Cached player info
 global.LootLockerPlayerID = ini_read_string("playerID","id","");
 global.LootLockerPlayerName = ini_read_string("playerName","name","");
-global.LootLockerPlayerRank = ini_read_string("LootLockerPlayerRank","id","");
-global.LootLockerPlayerScore = ini_read_string("LootLockerPlayerScore","id","");
-global.LootLockerPlayerMetadata = ini_read_string("LootLockerPlayerMetadata","id","");
+global.LootLockerPlayerRank = ini_read_string("LootLockerPlayerRank","rank","");
+global.LootLockerPlayerScore = ini_read_string("LootLockerPlayerScore","score","");
+global.LootLockerPlayerMetadata = ini_read_string("LootLockerPlayerMetadata","metadata","");
 ini_close();
 
 // Top highscores lists

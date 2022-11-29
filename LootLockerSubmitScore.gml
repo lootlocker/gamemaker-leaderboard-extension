@@ -9,6 +9,7 @@ var map = ds_map_create();
 ds_map_add(map, "Content-Type","application/json");
 ds_map_add(map,"x-session-token", sessionToken);
 var data = "{\"score\": "+string(argument1)+"}";
+global.LootLockerPlayerScore = argument1;   
 submitScoreMapID = http_request(url, "POST", map, data);
 if(global.LLdevelopmentMode == true)
 {
