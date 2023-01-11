@@ -111,13 +111,6 @@
         {"name":"LootLockerTurnOffAutoRefresh","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
         {"name":"LootLockerTurnOnAutoRefresh","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
       ],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"LootLockerSubmitScoreMetadata.gml","origname":"","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerSubmitScoreMetadata","externalName":"LootLockerSubmitScoreMetaData","kind":2,"help":"LootLockerSubmitScore(\"leaderboardID\", \"scoreToUpload\", \"someMetadata\") // Uploads score to the leaderboard with metadata","hidden":false,"returnType":1,"argCount":0,"args":[
-            1,
-            1,
-            1,
-          ],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"usesRunnerInterface":false,"order":[],},
   ],
   "classname": "",
   "tvosclassname": null,

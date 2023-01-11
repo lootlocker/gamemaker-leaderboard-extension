@@ -34,7 +34,7 @@ if(asyncStatus == 0)
 
     if(global.LLdevelopmentMode == true)
     {
-        show_debug_message(string(data));
+        show_debug_message(string(ds_map_find_value(async_load, text)));
     }
 
     // Login Session
