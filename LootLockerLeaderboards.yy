@@ -2,90 +2,89 @@
   "resourceType": "GMExtension",
   "resourceVersion": "1.2",
   "name": "LootLockerLeaderboards",
-  "optionsFile": "options.json",
-  "options": [],
-  "exportToGame": true,
-  "supportedTargets": -1,
-  "extensionVersion": "0.0.1",
-  "packageId": "",
-  "productId": "",
-  "author": "",
-  "date": "2022-03-09T15:23:04.036439+01:00",
-  "license": "",
-  "description": "",
-  "helpfile": "",
-  "iosProps": true,
-  "tvosProps": false,
+  "androidactivityinject": "",
+  "androidclassname": "",
+  "androidcodeinjection": "",
+  "androidinject": "",
+  "androidmanifestinject": "",
+  "androidPermissions": [],
   "androidProps": false,
-  "installdir": "",
+  "androidsourcedir": "",
+  "author": "",
+  "classname": "",
+  "copyToTargets": -1,
+  "date": "2022-03-09T15:23:04.036439+01:00",
+  "description": "",
+  "exportToGame": true,
+  "extensionVersion": "0.0.1",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"LootLockerInitialize.gml","origname":"","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerInitialize","externalName":"LootLockerInitialize","kind":2,"help":"LootLockerInitialize((string)\"gameAPIKey\",(string)\"version\",(bool true/false)developmentMode,(string or int)\"leaderboardID\")","hidden":false,"returnType":1,"argCount":0,"args":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"LootLockerInitialize.gml","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerInitialize","argCount":0,"args":[
             1,
             1,
             2,
             1,
-          ],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"usesRunnerInterface":false,"order":[
+          ],"documentation":"","externalName":"LootLockerInitialize","help":"LootLockerInitialize((string)\"gameAPIKey\",(string)\"version\",(bool true/false)developmentMode,(string or int)\"leaderboardID\")","hidden":false,"kind":2,"returnType":1,},
+      ],"init":"","kind":2,"order":[
         {"name":"LootLockerInitialize","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
-      ],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"LootLockerCallback.gml","origname":"","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerCallback","externalName":"LootLockerCallback","kind":2,"help":"Fetches the leaderboard data","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"usesRunnerInterface":false,"order":[
+      ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"LootLockerCallback.gml","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerCallback","argCount":0,"args":[],"documentation":"","externalName":"LootLockerCallback","help":"Fetches the leaderboard data","hidden":false,"kind":2,"returnType":1,},
+      ],"init":"","kind":2,"order":[
         {"name":"LootLockerCallback","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
-      ],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"LootLockerGetHighscoresTop.gml","origname":"","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerGetHighscoresTop","externalName":"LootLockerGetHighscoresTop","kind":2,"help":"LootLockerGetHighscoresTop(\"leaderboardID\", \"count\")// Manually fetch leaderboard data","hidden":false,"returnType":1,"argCount":0,"args":[
+      ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"LootLockerGetHighscoresTop.gml","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerGetHighscoresTop","argCount":0,"args":[
             1,
             1,
-          ],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"usesRunnerInterface":false,"order":[
+          ],"documentation":"","externalName":"LootLockerGetHighscoresTop","help":"LootLockerGetHighscoresTop(\"leaderboardID\", \"count\")// Manually fetch leaderboard data","hidden":false,"kind":2,"returnType":1,},
+      ],"init":"","kind":2,"order":[
         {"name":"LootLockerGetHighscoresTop","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
-      ],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"LootLockerSubmitScore.gml","origname":"","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerSubmitScore","externalName":"LootLockerSubmitScore","kind":2,"help":"LootLockerSubmitScore(\"leaderboardID\", \"scoreToUpload\") // Uploads score to the leaderboard","hidden":false,"returnType":1,"argCount":0,"args":[
+      ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"LootLockerSubmitScore.gml","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerSubmitScore","argCount":0,"args":[
             1,
             1,
-          ],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"usesRunnerInterface":false,"order":[
+          ],"documentation":"","externalName":"LootLockerSubmitScore","help":"LootLockerSubmitScore(\"leaderboardID\", \"scoreToUpload\") // Uploads score to the leaderboard","hidden":false,"kind":2,"returnType":1,},
+      ],"init":"","kind":2,"order":[
         {"name":"LootLockerSubmitScore","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
-      ],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"LootLockerSetPlayerName.gml","origname":"","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerSetPlayerName","externalName":"LootLockerSetPlayerName","kind":2,"help":"LootLockerSetPlayerName(\"newName\") // Set a new name to the current player","hidden":false,"returnType":1,"argCount":0,"args":[
+      ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"LootLockerSetPlayerName.gml","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerSetPlayerName","argCount":0,"args":[
             1,
-          ],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"usesRunnerInterface":false,"order":[
+          ],"documentation":"","externalName":"LootLockerSetPlayerName","help":"LootLockerSetPlayerName(\"newName\") // Set a new name to the current player","hidden":false,"kind":2,"returnType":1,},
+      ],"init":"","kind":2,"order":[
         {"name":"LootLockerSetPlayerName","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
-      ],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"LootLockerGetHighscoresCentered.gml","origname":"","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerGetHighscoresCentered","externalName":"LootLockerGetHighscoresCentered","kind":2,"help":"LootLockerGetHighscoresCentered() // Manually get the centered leaderboard entries","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"usesRunnerInterface":false,"order":[
+      ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"LootLockerGetHighscoresCentered.gml","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerGetHighscoresCentered","argCount":0,"args":[],"documentation":"","externalName":"LootLockerGetHighscoresCentered","help":"LootLockerGetHighscoresCentered() // Manually get the centered leaderboard entries","hidden":false,"kind":2,"returnType":1,},
+      ],"init":"","kind":2,"order":[
         {"name":"LootLockerGetHighscoresCentered","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
-      ],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"LootLockerReset.gml","origname":"","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerReset","externalName":"LootLockerReset","kind":2,"help":"LootLockerReset() // Log out current player and start a new session","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"usesRunnerInterface":false,"order":[
+      ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"LootLockerReset.gml","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerReset","argCount":0,"args":[],"documentation":"","externalName":"LootLockerReset","help":"LootLockerReset() // Log out current player and start a new session","hidden":false,"kind":2,"returnType":1,},
+      ],"init":"","kind":2,"order":[
         {"name":"LootLockerReset","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
-      ],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"LootLockerVariables.gml","origname":"","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresTopRankList","externalName":"LLHighscoresTopRankList","kind":2,"help":"Get Top Rank as array","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresTopNamesList","externalName":"LLHighscoresTopNamesList","kind":2,"help":"Get Top Names as array","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresTopMetadataList","externalName":"LLHighscoresTopMetadataList","kind":2,"help":"Get Top Metadata as array","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresTopScoreList","externalName":"LLHighscoresTopScoreList","kind":2,"help":"Get Top scores as array","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresTopIDList","externalName":"LLHighscoresTopIDList","kind":2,"help":"Get Top ID as array","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresTopFormatted","externalName":"LLHighscoresTopFormatted","kind":2,"help":"Get full top leaderboard as string","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresCenteredRankList","externalName":"LLHighscoresCenteredRankList","kind":2,"help":"Get Centered Rank as array","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresCenteredNamesList","externalName":"LLHighscoresCenteredNamesList","kind":2,"help":"Get Centered Names as array","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresCenteredMetadataList","externalName":"LLHighscoresCenteredMetadataList","kind":2,"help":"Get Centered MetaData as array","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresCenteredScoreList","externalName":"LLHighscoresCenteredScoreList","kind":2,"help":"Get Centered Scores as array","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresCenteredIDList","externalName":"LLHighscoresCenteredIDList","kind":2,"help":"Get Centered ID's as array","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresCenteredFormatted","externalName":"LLHighscoresCenteredFormatted","kind":2,"help":"Get full centered leaderboard as string","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLPlayerRank","externalName":"LLPlayerRank","kind":2,"help":"Get current player rank on leaderboard","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLPlayerName","externalName":"LLPlayerName","kind":2,"help":"Get current player name on leaderboard","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLPlayerID","externalName":"LLPlayerID","kind":2,"help":"Get current player ID on leaderboard","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLPlayerScore","externalName":"LLPlayerScore","kind":2,"help":"Get current player score on leaderboard","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLPlayerMetadata","externalName":"LLPlayerMetadata","kind":2,"help":"Get current player metadata on leaderboard","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"usesRunnerInterface":false,"order":[
+      ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"LootLockerVariables.gml","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresTopRankList","argCount":0,"args":[],"documentation":"","externalName":"LLHighscoresTopRankList","help":"Get Top Rank as array","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresTopNamesList","argCount":0,"args":[],"documentation":"","externalName":"LLHighscoresTopNamesList","help":"Get Top Names as array","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresTopMetadataList","argCount":0,"args":[],"documentation":"","externalName":"LLHighscoresTopMetadataList","help":"Get Top Metadata as array","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresTopScoreList","argCount":0,"args":[],"documentation":"","externalName":"LLHighscoresTopScoreList","help":"Get Top scores as array","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresTopIDList","argCount":0,"args":[],"documentation":"","externalName":"LLHighscoresTopIDList","help":"Get Top ID as array","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresTopFormatted","argCount":0,"args":[],"documentation":"","externalName":"LLHighscoresTopFormatted","help":"Get full top leaderboard as string","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresCenteredRankList","argCount":0,"args":[],"documentation":"","externalName":"LLHighscoresCenteredRankList","help":"Get Centered Rank as array","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresCenteredNamesList","argCount":0,"args":[],"documentation":"","externalName":"LLHighscoresCenteredNamesList","help":"Get Centered Names as array","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresCenteredMetadataList","argCount":0,"args":[],"documentation":"","externalName":"LLHighscoresCenteredMetadataList","help":"Get Centered MetaData as array","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresCenteredScoreList","argCount":0,"args":[],"documentation":"","externalName":"LLHighscoresCenteredScoreList","help":"Get Centered Scores as array","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresCenteredIDList","argCount":0,"args":[],"documentation":"","externalName":"LLHighscoresCenteredIDList","help":"Get Centered ID's as array","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLHighscoresCenteredFormatted","argCount":0,"args":[],"documentation":"","externalName":"LLHighscoresCenteredFormatted","help":"Get full centered leaderboard as string","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLPlayerRank","argCount":0,"args":[],"documentation":"","externalName":"LLPlayerRank","help":"Get current player rank on leaderboard","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLPlayerName","argCount":0,"args":[],"documentation":"","externalName":"LLPlayerName","help":"Get current player name on leaderboard","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLPlayerID","argCount":0,"args":[],"documentation":"","externalName":"LLPlayerID","help":"Get current player ID on leaderboard","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLPlayerScore","argCount":0,"args":[],"documentation":"","externalName":"LLPlayerScore","help":"Get current player score on leaderboard","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LLPlayerMetadata","argCount":0,"args":[],"documentation":"","externalName":"LLPlayerMetadata","help":"Get current player metadata on leaderboard","hidden":false,"kind":2,"returnType":1,},
+      ],"init":"","kind":2,"order":[
         {"name":"LLHighscoresTopRankList","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
         {"name":"LLHighscoresTopNamesList","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
         {"name":"LLHighscoresTopMetadataList","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
@@ -103,57 +102,60 @@
         {"name":"LLPlayerID","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
         {"name":"LLPlayerScore","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
         {"name":"LLPlayerMetadata","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
-      ],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"LootLockerAutoRefresh.gml","origname":"","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerTurnOffAutoRefresh","externalName":"LootLockerTurnOffAutoRefresh","kind":2,"help":"Turn off auto Refresh for leaderboards","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerTurnOnAutoRefresh","externalName":"LootLockerTurnOnAutoRefresh","kind":2,"help":"Turn on auto Refresh for leaderboards","hidden":false,"returnType":1,"argCount":0,"args":[],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"usesRunnerInterface":false,"order":[
+      ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"LootLockerAutoRefresh.gml","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerTurnOffAutoRefresh","argCount":0,"args":[],"documentation":"","externalName":"LootLockerTurnOffAutoRefresh","help":"Turn off auto Refresh for leaderboards","hidden":false,"kind":2,"returnType":1,},
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerTurnOnAutoRefresh","argCount":0,"args":[],"documentation":"","externalName":"LootLockerTurnOnAutoRefresh","help":"Turn on auto Refresh for leaderboards","hidden":false,"kind":2,"returnType":1,},
+      ],"init":"","kind":2,"order":[
         {"name":"LootLockerTurnOffAutoRefresh","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
         {"name":"LootLockerTurnOnAutoRefresh","path":"extensions/LootLockerLeaderboards/LootLockerLeaderboards.yy",},
-      ],},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","filename":"LootLockerSubmitScoreMetadata.gml","origname":"","init":"","final":"","kind":2,"uncompress":false,"functions":[
-        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerSubmitScoreMetadata","externalName":"LootLockerSubmitScoreMetaData","kind":2,"help":"LootLockerSubmitScore(\"leaderboardID\", \"scoreToUpload\", \"someMetadata\") // Uploads score to the leaderboard with metadata","hidden":false,"returnType":1,"argCount":0,"args":[
+      ],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":-1,"filename":"LootLockerSubmitScoreMetadata.gml","final":"","functions":[
+        {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"LootLockerSubmitScoreMetadata","argCount":0,"args":[
             1,
             1,
             1,
-          ],"documentation":"",},
-      ],"constants":[],"ProxyFiles":[],"copyToTargets":-1,"usesRunnerInterface":false,"order":[],},
+          ],"documentation":"","externalName":"LootLockerSubmitScoreMetaData","help":"LootLockerSubmitScore(\"leaderboardID\", \"scoreToUpload\", \"someMetadata\") // Uploads score to the leaderboard with metadata","hidden":false,"kind":2,"returnType":1,},
+      ],"init":"","kind":2,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
   ],
-  "classname": "",
-  "tvosclassname": null,
-  "tvosdelegatename": null,
-  "iosdelegatename": "",
-  "androidclassname": "",
-  "sourcedir": "",
-  "androidsourcedir": "",
-  "macsourcedir": "",
-  "maccompilerflags": "",
-  "tvosmaccompilerflags": "",
-  "maclinkerflags": "",
-  "tvosmaclinkerflags": "",
-  "iosplistinject": "",
-  "tvosplistinject": "",
-  "androidinject": "",
-  "androidmanifestinject": "",
-  "androidactivityinject": "",
   "gradleinject": "",
-  "androidcodeinjection": "",
   "hasConvertedCodeInjection": true,
-  "ioscodeinjection": "",
-  "tvoscodeinjection": "",
-  "iosSystemFrameworkEntries": [],
-  "tvosSystemFrameworkEntries": [],
-  "iosThirdPartyFrameworkEntries": [],
-  "tvosThirdPartyFrameworkEntries": [],
+  "helpfile": "",
+  "HTML5CodeInjection": "",
+  "html5Props": false,
   "IncludedResources": [],
-  "androidPermissions": [],
-  "copyToTargets": -1,
-  "iosCocoaPods": "",
-  "tvosCocoaPods": "",
+  "installdir": "",
   "iosCocoaPodDependencies": "",
-  "tvosCocoaPodDependencies": "",
+  "iosCocoaPods": "",
+  "ioscodeinjection": "",
+  "iosdelegatename": "",
+  "iosplistinject": "",
+  "iosProps": true,
+  "iosSystemFrameworkEntries": [],
+  "iosThirdPartyFrameworkEntries": [],
+  "license": "",
+  "maccompilerflags": "",
+  "maclinkerflags": "",
+  "macsourcedir": "",
+  "options": [],
+  "optionsFile": "options.json",
+  "packageId": "",
   "parent": {
     "name": "LootLockerLeaderboards",
     "path": "folders/Extensions/LootLockerLeaderboards.yy",
   },
+  "productId": "",
+  "sourcedir": "",
+  "supportedTargets": -1,
+  "tvosclassname": null,
+  "tvosCocoaPodDependencies": "",
+  "tvosCocoaPods": "",
+  "tvoscodeinjection": "",
+  "tvosdelegatename": null,
+  "tvosmaccompilerflags": "",
+  "tvosmaclinkerflags": "",
+  "tvosplistinject": "",
+  "tvosProps": false,
+  "tvosSystemFrameworkEntries": [],
+  "tvosThirdPartyFrameworkEntries": [],
 }
